@@ -1,7 +1,10 @@
+import { Button, Htag } from '@/components';
+
 export default function Home() {
 	return (
 		<main>
-			<div>Main page</div>
+			<Htag tag="h1">Main page</Htag>
+			<Button appearance="primary">Кнопка</Button>
 		</main>
 	);
 }
