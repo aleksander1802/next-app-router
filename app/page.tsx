@@ -1,4 +1,4 @@
-import { Button, Htag, P } from '@/components';
+import { Button, Htag, P, Tag } from '@/components';
 
 export default function Home() {
 	return (
@@ -15,6 +15,12 @@ export default function Home() {
 				Consectetur, molestias aliquid. Rem excepturi minus, sequi
 				ratione saepe magni tenetur nulla!
 			</P>
+			<Tag size='s'>Маленький</Tag>
+			<Tag size='m'>Средний</Tag>
+			<Tag size='m' color='red'>Red</Tag>
+			<Tag size='m' color='primary'>Primary</Tag>
+			<Tag size='m'>Ghost</Tag>
+			<Tag size='m' color='green'>Green</Tag>
 		</main>
 	);
 }

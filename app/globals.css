@@ -34,6 +34,7 @@ a {
 	--white: white;
 	--primary: linear-gradient(273deg, #686DE0 4.95%, #4834D4 93.62%);	
 	--primary-hover: linear-gradient(273deg, #5356b6 4.95%, #3e2cb3 100%);
+	--primary-dark: midnightblue;
 	--red-light: #fea291;
 	--red: #fc836d;
 	--green: #007b48;
