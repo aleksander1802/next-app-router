@@ -1,6 +1,8 @@
 'use client';
 
 import { Button, Htag, P, Rating, Tag } from '@/components';
+import { Menu } from '@/components/Menu/Menu';
+
 import { useState } from 'react';
 
 export default function Home() {
@@ -46,6 +48,7 @@ export default function Home() {
 				setRating={setRating}
 				isEditable
 			/>
+			<Menu />
 		</div>
 	);
 }
