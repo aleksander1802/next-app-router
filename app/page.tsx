@@ -7,7 +7,7 @@ export default function Home() {
 	const [rating, setRating] = useState(4);
 
 	return (
-		<main>
+		<div>
 			<Htag tag="h1">Main page</Htag>
 			<Button
 				appearance="primary"
@@ -46,6 +46,6 @@ export default function Home() {
 				setRating={setRating}
 				isEditable
 			/>
-		</main>
+		</div>
 	);
 }

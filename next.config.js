@@ -3,7 +3,7 @@ const nextConfig = {
 	images: {
 		domains: ['courses-top.ru'],
 	},
-	webpack: (config) => {
+	webpack: (config, options) => {
 		config.module.rules.push({
 			loader: '@svgr/webpack',
 			issuer: /\.[jt]sx?$/,
