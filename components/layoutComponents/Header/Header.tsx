@@ -1,18 +1,21 @@
 'use client';
-
 import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
-import Image from 'next/image';
 import cn from 'classnames';
-import { motion, useReducedMotion } from 'framer-motion';
+
+import { motion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
-	// const [isOpened, setIsOpened] = useState<boolean>(false);
+	const [isOpened, setIsOpened] = useState<boolean>(false);
+	const router = useRouter();
 
-	const shouldReduceMotion = useReducedMotion();
+	useEffect(() => {
+		setIsOpened(false);
+	}, [router]);
 
 	const variants = {
 		opened: {
@@ -23,7 +26,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 			},
 		},
 		closed: {
-			opacity: shouldReduceMotion ? 1 : 0,
+			opacity: 0,
 			x: '100%',
 		},
 	};
@@ -38,18 +41,16 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 				alt={'logo'}
 				width={159}
 				height={44}
-				className={styles.logo}
 			/>
 
-			{/* <motion.div
+			<motion.div
 				className={styles.mobileMenu}
 				variants={variants}
-				initial={'opened'}
+				initial={'closed'}
 				animate={isOpened ? 'opened' : 'closed'}
-
 			>
 				<Sidebar />
-			</motion.div> */}
+			</motion.div>
 		</header>
 	);
 };

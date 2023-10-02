@@ -9,6 +9,7 @@ export async function generateMetadata({
 	params: { alias: string };
 }): Promise<Metadata> {
 	const page = await getPage(params.alias);
+
 	return {
 		title: page?.metaTitle,
 	};
@@ -27,6 +28,7 @@ export default async function PageProducts({
 	params: { alias: string };
 }) {
 	const page = await getPage(params.alias);
+
 	if (!page) {
 		notFound();
 	}

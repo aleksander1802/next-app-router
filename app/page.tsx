@@ -1,8 +1,7 @@
 'use client';
 
 import { Button, Htag, P, Rating, Tag } from '@/components';
-import { Menu } from '@/components/Menu/Menu';
-
+import { Menu } from '@/components/layoutComponents/Menu/Menu';
 import { useState } from 'react';
 
 export default function Home() {

@@ -2,6 +2,7 @@ import { SidebarProps } from './Sidebar.props';
 import styles from './Sidebar.module.css';
 import Image from 'next/image';
 import cn from 'classnames';
+import Link from 'next/link';
 
 export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 	return (
@@ -9,13 +10,15 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 			className={cn(className, styles.sidebar)}
 			{...props}
 		>
-			<Image
-				src={'/logo.svg'}
-				alt={'logo'}
-				width={159}
-				height={44}
-				className={styles.logo}
-			/>
+			<Link href={'/'}>
+				<Image
+					src={'/logo.svg'}
+					alt={'logo'}
+					width={159}
+					height={44}
+					className={styles.logo}
+				/>
+			</Link>
 		</div>
 	);
 };
