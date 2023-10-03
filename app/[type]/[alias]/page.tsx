@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 	);
 }
 
-export default async function PageProducts({
+export default async function PageAlias({
 	params,
 }: {
 	params: { alias: string };

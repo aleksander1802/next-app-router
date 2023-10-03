@@ -41,6 +41,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 				alt={'logo'}
 				width={159}
 				height={44}
+				priority
 			/>
 
 			<motion.div

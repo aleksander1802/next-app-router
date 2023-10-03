@@ -1,5 +1,4 @@
 import { getMenu } from '@/api/menu';
-
 import styles from './Menu.module.css';
 import cn from 'classnames';
 import { KeyboardEvent, useEffect, useState } from 'react';
@@ -18,8 +17,6 @@ import Image from 'next/image';
 
 export function Menu() {
 	const [announce, setAnnounce] = useState<'closed' | 'opened' | undefined>();
-
-	const [isLoading, setIsLoading] = useState(false);
 
 	const pathname = usePathname();
 
@@ -53,11 +50,9 @@ export function Menu() {
 
 	useEffect(() => {
 		async function fetchMenu() {
-			setIsLoading(true);
 			const menuData = await getMenu(activeCategory);
 
 			setMenuState(menuData);
-			menuData && setIsLoading(false);
 		}
 
 		fetchMenu();
@@ -84,16 +79,13 @@ export function Menu() {
 	};
 
 	const buildFirstLevel = () => {
-		return isLoading ? (
-			<>Loading...</>
-		) : (
+		return (
 			<ul className={styles.firstLevelList}>
 				{firstLevelMenu.map((m, i) => (
 					<li key={m.route}>
-						<div
-							onClick={() => {
-								setActiveCategory(i);
-							}}
+						<Link
+							href={`/${m.route}`}
+							
 						>
 							<div
 								className={cn(styles.firstLevel, {
@@ -106,12 +98,13 @@ export function Menu() {
 									src={m.icon}
 									width={24}
 									height={24}
+									priority
 								/>
 								<span className={cn(styles.menuCursor)}>
 									{m.name}
 								</span>
 							</div>
-						</div>
+						</Link>
 						{m.id === activeCategory && buildSecondLevel(m)}
 					</li>
 				))}
@@ -120,7 +113,7 @@ export function Menu() {
 	};
 
 	const buildSecondLevel = (menuItem: FirstLevelMenuItem) => {
-		return !!menuState.length ? (
+		return (
 			<ul className={styles.secondBlock}>
 				{menuState.map((m) => {
 					if (
@@ -164,8 +157,6 @@ export function Menu() {
 					);
 				})}
 			</ul>
-		) : (
-			<>Ничего не найдено</>
 		);
 	};
 

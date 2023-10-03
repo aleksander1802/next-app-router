@@ -17,6 +17,7 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 					width={159}
 					height={44}
 					className={styles.logo}
+					priority
 				/>
 			</Link>
 		</div>
