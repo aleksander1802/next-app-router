@@ -1,12 +1,8 @@
-'use client';
-
 import { Button, Htag, P, Rating, Tag } from '@/components';
-import { Menu } from '@/components/layoutComponents/Menu/Menu';
-import { useState } from 'react';
 
 export default function Home() {
-	const [rating, setRating] = useState(4);
-
+	
+	
 	return (
 		<div>
 			<Htag tag="h1">Main page</Htag>
@@ -42,12 +38,6 @@ export default function Home() {
 			>
 				Green
 			</Tag>
-			<Rating
-				rating={rating}
-				setRating={setRating}
-				isEditable
-			/>
-			<Menu />
 		</div>
 	);
 }

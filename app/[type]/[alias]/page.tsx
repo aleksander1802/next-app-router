@@ -1,5 +1,9 @@
 import { getMenu } from '@/api/menu';
 import { getPage } from '@/api/page';
+import { getProducts } from '@/api/products';
+import { firstLevelMenu } from '@/helpers/helpers';
+import { PageItem } from '@/interfaces/menu.interface';
+import { TopPageComponent } from '@/page-components';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -15,22 +19,28 @@ export async function generateMetadata({
 	};
 }
 
-export async function generateStaticParams() {
-	const menu = await getMenu(0);
-	return menu.flatMap((item) =>
-		item.pages.map((page) => ({ alias: page.alias })),
-	);
-}
-
 export default async function PageAlias({
 	params,
 }: {
-	params: { alias: string };
+	params: { type: string; alias: string };
 }) {
 	const page = await getPage(params.alias);
 
 	if (!page) {
 		notFound();
 	}
-	return <div>{page.title}</div>;
+
+	const firstCategoryItem = firstLevelMenu.find(
+		(m) => m.route === params.type,
+	);
+
+	const products = await getProducts(page.category);
+
+	return (
+		<TopPageComponent
+			firstCategory={firstCategoryItem!.id}
+			page={page}
+			products={products}
+		/>
+	);
 }

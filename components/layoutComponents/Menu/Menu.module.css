@@ -65,8 +65,6 @@
 .thirdLevel {
 	display: block;
 
-	margin-bottom: 10px;
-
 	cursor: pointer;
 
 	color: var(--gray-dark);

@@ -18,8 +18,7 @@ import { notFound } from 'next/navigation';
 
 // export async function generateStaticParams() {
 // 	const menu = await getMenu(0);
-	
-	
+
 // 	return menu.flatMap((item) =>
 // 		item.pages.map((page) => ({ alias: page.alias })),
 // 	);
@@ -30,9 +29,7 @@ export default async function PageAlias({
 }: {
 	params: { type: string };
 }) {
-	const page = firstLevelMenu.map(item => {`/courses`})
-	console.log(params);
-	
+	const page = firstLevelMenu.map((item) => item.route);
 
 	if (!page) {
 		notFound();

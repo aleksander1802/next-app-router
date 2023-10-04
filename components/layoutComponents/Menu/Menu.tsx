@@ -20,8 +20,8 @@ export function Menu() {
 
 	const pathname = usePathname();
 
-	const [menuState, setMenuState] = useState<MenuItem[]>([]);
 	const [activeCategory, setActiveCategory] = useState(0);
+	const [menuState, setMenuState] = useState<MenuItem[]>([]);
 
 	const setMenu = (newMenu: MenuItem[]) => {
 		setMenuState(newMenu);
@@ -83,10 +83,7 @@ export function Menu() {
 			<ul className={styles.firstLevelList}>
 				{firstLevelMenu.map((m, i) => (
 					<li key={m.route}>
-						<Link
-							href={`/${m.route}`}
-							
-						>
+						<Link href={`/${m.route}`} onClick={() => setActiveCategory(i)}>
 							<div
 								className={cn(styles.firstLevel, {
 									[styles.firstLevelActive]:
