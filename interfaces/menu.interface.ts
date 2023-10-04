@@ -19,5 +19,6 @@ export interface FirstLevelMenuItem {
 	route: string;
 	name: string;
 	icon: string;
+	filledIcon: string,
 	id: TopLevelCategory;
 }

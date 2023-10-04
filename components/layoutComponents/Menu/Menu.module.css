@@ -19,12 +19,12 @@
 
 .firstLevelActive,
 .firstLevel:hover {
-	color: var(--primary);
+	color: var(--primary-light);
 }
 
 .firstLevelActive svg,
 .firstLevel:hover svg {
-	fill: var(--primary);
+	fill: var(--primary-light);
 }
 
 .secondLevel {
@@ -43,6 +43,12 @@
 
 	font-weight: 300;
 }
+
+.secondLevelActive,
+.secondLevel:hover {
+	color: var(--primary-light);
+}
+
 
 .secondBlock {
 	margin-top: 15px;
@@ -64,7 +70,7 @@
 
 .thirdLevel {
 	display: block;
-
+	line-height: 14px;
 	cursor: pointer;
 
 	color: var(--gray-dark);
@@ -76,7 +82,7 @@
 
 .thirdLevelActive,
 .thirdLevel:hover {
-	color: var(--primary);
+	color: var(--primary-light);
 }
 
 .menuCursor {

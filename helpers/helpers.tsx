@@ -6,24 +6,28 @@ export const firstLevelMenu: FirstLevelMenuItem[] = [
 		route: 'courses',
 		name: 'Курсы',
 		icon: '/courses.svg',
+		filledIcon: '/courses_filled.svg',
 		id: TopLevelCategory.Courses,
 	},
 	{
 		route: 'services',
 		name: 'Сервисы',
 		icon: '/services.svg',
+		filledIcon: '/services_filled.svg',
 		id: TopLevelCategory.Services,
 	},
 	{
 		route: 'books',
 		name: 'Книги',
 		icon: '/books.svg',
+		filledIcon: '/books_filled.svg',
 		id: TopLevelCategory.Books,
 	},
 	{
 		route: 'products',
 		name: 'Продукты',
 		icon: '/products.svg',
+		filledIcon: '/products_filled.svg',
 		id: TopLevelCategory.Products,
 	},
 ];

@@ -37,7 +37,7 @@
 }
 
 .countValue {
-	color: var(--primary);
+	color: var(--primary-light);
 
 	font-size: 36px;
 	font-weight: bold;

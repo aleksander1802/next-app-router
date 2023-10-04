@@ -43,9 +43,10 @@ export function Menu() {
 	const variantsChildren = {
 		visible: {
 			opacity: 1,
-			height: 29,
+			height: 'max-content',
+			marginBottom: 10,
 		},
-		hidden: { opacity: 0, height: 0 },
+		hidden: { opacity: 0, height: 0, marginBottom: 0 },
 	};
 
 	useEffect(() => {
@@ -83,7 +84,10 @@ export function Menu() {
 			<ul className={styles.firstLevelList}>
 				{firstLevelMenu.map((m, i) => (
 					<li key={m.route}>
-						<Link href={`/${m.route}`} onClick={() => setActiveCategory(i)}>
+						<Link
+							href={`/${m.route}`}
+							onClick={() => setActiveCategory(i)}
+						>
 							<div
 								className={cn(styles.firstLevel, {
 									[styles.firstLevelActive]:
@@ -92,10 +96,16 @@ export function Menu() {
 							>
 								<Image
 									alt={'course logo'}
-									src={m.icon}
+									src={
+										m.id === activeCategory
+											? m.filledIcon
+											: m.icon
+									}
 									width={24}
 									height={24}
 									priority
+									color="white"
+									style={{ fill: 'white' }}
 								/>
 								<span className={cn(styles.menuCursor)}>
 									{m.name}
@@ -129,7 +139,9 @@ export function Menu() {
 										m._id.secondCategory,
 									)
 								}
-								className={styles.secondLevel}
+								className={cn(styles.secondLevel, {
+									[styles.secondLevelActive]: m.isOpened,
+								})}
 								onClick={() =>
 									openSecondLevel(m._id.secondCategory)
 								}
