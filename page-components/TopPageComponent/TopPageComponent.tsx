@@ -1,10 +1,8 @@
-import { Htag, P, Tag } from '../../components';
+import { Advantages, HhData, Htag, Tag } from '../../components';
 import { TopPageComponentProps } from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
-import { useEffect, useReducer } from 'react';
-import { useReducedMotion } from 'framer-motion';
-import { HhData } from '@/components/HhData/HhData';
+
 
 export const TopPageComponent = ({
 	page,
@@ -61,7 +59,7 @@ export const TopPageComponent = ({
 			{page.advantages && page.advantages.length > 0 && (
 				<>
 					<Htag tag="h2">Преимущства</Htag>
-					{/* <Advantages advantages={page.advantages} /> */}
+					<Advantages advantages={page.advantages} />
 				</>
 			)}
 			{page.seoText && (

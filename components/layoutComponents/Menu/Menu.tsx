@@ -2,7 +2,6 @@ import { getMenu } from '@/api/menu';
 import styles from './Menu.module.css';
 import cn from 'classnames';
 import { KeyboardEvent, useEffect, useState } from 'react';
-
 import {
 	FirstLevelMenuItem,
 	MenuItem,
@@ -12,7 +11,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { firstLevelMenu } from '../../../helpers/helpers';
 import { motion } from 'framer-motion';
-
 import Image from 'next/image';
 
 export function Menu() {

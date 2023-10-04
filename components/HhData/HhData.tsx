@@ -1,8 +1,8 @@
 import { HhDataProps } from './HhData.props';
 import { priceRu } from '../../helpers/helpers';
-import { Card } from '../Card/Card';
 import Image from 'next/image';
 import styles from './HhData.module.css';
+import { Card } from '..';
 
 export const HhData = ({
 	count,
