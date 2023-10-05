@@ -1,18 +1,27 @@
-import { Advantages, HhData, Htag, Tag } from '../../components';
+'use client';
+
+import { Advantages, HhData, Htag, Sort, Tag } from '../../components';
 import { TopPageComponentProps } from './TopPageComponent.props';
 import styles from './TopPageComponent.module.css';
 import { TopLevelCategory } from '../../interfaces/page.interface';
-
+import { SortEnum } from '@/components/Sort/Sort.props';
+import { useReducer } from 'react';
+import { sortReducer } from './sort.reducer';
 
 export const TopPageComponent = ({
 	page,
 	products,
 	firstCategory,
 }: TopPageComponentProps): JSX.Element => {
-	// const [{ products: sortedProducts, sort }, dispathSort] = useReducer(
-	// 	sortReducer,
-	// 	{ products, sort: SortEnum.Rating },
-	// );
+	const [{ products: sortedProducts, sort }, dispathSort] = useReducer(
+		sortReducer,
+		{ products, sort: SortEnum.Rating },
+	);
+
+	const setSort = (sort: SortEnum) => {
+		dispathSort({ type: sort });
+	};
+
 	// const shouldReduceMotion = useReducedMotion();
 
 	return (
@@ -28,11 +37,15 @@ export const TopPageComponent = ({
 						{products.length}
 					</Tag>
 				)}
-				{/* <Sort
+				<Sort
 					sort={sort}
 					setSort={setSort}
-				/> */}
+				/>
 			</div>
+
+			{sortedProducts &&
+				sortedProducts.map((p) => <div key={p._id}>{p.title}</div>)}
+
 			{/* <div role="list">
 				{sortedProducts &&
 					sortedProducts.map((p) => (
