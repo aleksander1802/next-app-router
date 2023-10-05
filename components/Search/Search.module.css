@@ -12,8 +12,14 @@
 	position: absolute;
 	top: 3px;
 	right: 3px;
-
 	width: 30px;
 	height: 30px;
 	padding: 7px;
+}
+
+.button img {
+	position: absolute;
+	top: 50%;
+	right: 50%;
+	transform: translate(50%, -50%);
 }
