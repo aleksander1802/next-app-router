@@ -6,6 +6,7 @@ import Image from 'next/image';
 import cn from 'classnames';
 import Link from 'next/link';
 import { Menu } from '../Menu/Menu';
+import { Search } from '@/components/Search/Search';
 
 export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 	return (
@@ -21,7 +22,7 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 				className={styles.logo}
 				priority
 			/>
-
+			<Search />
 			<Menu />
 		</div>
 	);

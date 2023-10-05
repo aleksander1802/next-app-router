@@ -1,9 +1,7 @@
-import { getMenu } from '@/api/menu';
 import { getPage } from '@/api/page';
 import { firstLevelMenu } from '@/helpers/helpers';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-
 // export async function generateMetadata({
 // 	params,
 // }: {
@@ -29,10 +27,11 @@ export default async function PageAlias({
 }: {
 	params: { type: string };
 }) {
-	const page = firstLevelMenu.map((item) => item.route);
+	const page = firstLevelMenu.find((item) => item.route === params.type);
 
 	if (!page) {
 		notFound();
 	}
+
 	return <div>Page {params.type}</div>;
 }

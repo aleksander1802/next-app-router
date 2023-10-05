@@ -1,8 +1,6 @@
-import { Button, Htag, P, Rating, Tag } from '@/components';
+import { Button, Htag, P, Tag } from '@/components';
 
 export default function Home() {
-	
-	
 	return (
 		<div>
 			<Htag tag="h1">Main page</Htag>

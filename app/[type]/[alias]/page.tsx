@@ -1,8 +1,6 @@
-import { getMenu } from '@/api/menu';
 import { getPage } from '@/api/page';
 import { getProducts } from '@/api/products';
 import { firstLevelMenu } from '@/helpers/helpers';
-import { PageItem } from '@/interfaces/menu.interface';
 import { TopPageComponent } from '@/page-components';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';

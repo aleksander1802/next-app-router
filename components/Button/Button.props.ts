@@ -1,4 +1,9 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
+import {
+	ButtonHTMLAttributes,
+	ChangeEvent,
+	DetailedHTMLProps,
+	ReactNode,
+} from 'react';
 
 export interface ButtonProps
 	extends Omit<
@@ -11,4 +16,5 @@ export interface ButtonProps
 	children: ReactNode;
 	appearance: 'primary' | 'ghost';
 	arrow?: 'right' | 'down' | 'none';
+	onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
 }
