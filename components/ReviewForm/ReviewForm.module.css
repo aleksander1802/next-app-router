@@ -8,6 +8,11 @@
 	gap: 20px 30px;
 }
 
+.isOpen {
+	position: relative;
+	z-index: -1;
+}
+
 .description,
 .submit {
 	grid-column: start / end;

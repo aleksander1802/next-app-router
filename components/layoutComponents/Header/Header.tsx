@@ -6,16 +6,16 @@ import cn from 'classnames';
 import { motion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	const [isOpened, setIsOpened] = useState<boolean>(false);
-	const router = useRouter();
+	const pathname = usePathname();
 
 	useEffect(() => {
 		setIsOpened(false);
-	}, [router]);
+	}, [pathname]);
 
 	const variants = {
 		opened: {

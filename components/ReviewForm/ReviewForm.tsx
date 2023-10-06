@@ -49,7 +49,9 @@ export const ReviewForm = ({
 	return (
 		<form onSubmit={handleSubmit(onSubmit)}>
 			<div
-				className={cn(styles.reviewForm, className)}
+				className={cn(styles.reviewForm, className, {
+					[styles.isOpen]: !isOpened,
+				})}
 				{...props}
 			>
 				<Input
