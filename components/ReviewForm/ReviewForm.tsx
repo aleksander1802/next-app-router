@@ -1,6 +1,6 @@
+'use client';
 import { ReviewFormProps } from './ReviewForm.props';
 import styles from './ReviewForm.module.css';
-import CloseIcon from './close.svg';
 import cn from 'classnames';
 import { Input } from '../Input/Input';
 import { Rating } from '../Rating/Rating';
@@ -10,6 +10,7 @@ import { useForm, Controller } from 'react-hook-form';
 import { IReviewForm } from './ReviewForm.interface';
 import { useState } from 'react';
 import { postReview } from '@/api/review';
+import Image from 'next/image';
 
 export const ReviewForm = ({
 	productId,
@@ -139,7 +140,12 @@ export const ReviewForm = ({
 						className={styles.close}
 						aria-label="Закрыть оповещение"
 					>
-						<CloseIcon />
+						<Image
+							src={'/close.svg'}
+							alt={'close button'}
+							width={12}
+							height={12}
+						/>
 					</button>
 				</div>
 			)}
@@ -154,7 +160,12 @@ export const ReviewForm = ({
 						className={styles.close}
 						aria-label="Закрыть оповещение"
 					>
-						<CloseIcon />
+						<Image
+							src={'/close.svg'}
+							alt={'close button'}
+							width={12}
+							height={12}
+						/>
 					</button>
 				</div>
 			)}
