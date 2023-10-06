@@ -14,14 +14,16 @@ export const Sidebar = ({ className, ...props }: SidebarProps): JSX.Element => {
 			className={cn(className, styles.sidebar)}
 			{...props}
 		>
-			<Image
-				src={'/logo.svg'}
-				alt={'logo'}
-				width={159}
-				height={44}
-				className={styles.logo}
-				priority
-			/>
+			<Link href={'/'}>
+				<Image
+					src={'/logo.svg'}
+					alt={'logo'}
+					width={159}
+					height={44}
+					className={styles.logo}
+					priority
+				/>
+			</Link>
 			<Search />
 			<Menu />
 		</div>
