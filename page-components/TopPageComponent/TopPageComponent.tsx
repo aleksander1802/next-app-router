@@ -48,7 +48,6 @@ export const TopPageComponent = ({
 					sortedProducts.map((p) => (
 						<Product
 							role="listitem"
-							layout={true}
 							key={p._id}
 							product={p}
 						/>

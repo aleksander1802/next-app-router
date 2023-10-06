@@ -32,6 +32,7 @@ export const ReviewForm = ({
 	const onSubmit = async (formData: IReviewForm) => {
 		try {
 			const { message } = await postReview({ formData, productId });
+
 			if (message) {
 				setIsSuccess(true);
 				reset();
