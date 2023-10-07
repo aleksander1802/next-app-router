@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import { Sidebar } from '@/components/layoutComponents/Sidebar/Sidebar';
 import { Footer } from '@/components/layoutComponents/Footer/Footer';
+import { Up } from '@/components';
 
 const inter = Noto_Sans({
 	weight: ['300', '400', '500', '700'],
@@ -38,6 +39,7 @@ export default function RootLayout({
 						{children}
 					</main>
 					<Footer className={styles.footer} />
+					<Up />
 				</div>
 			</body>
 		</html>
