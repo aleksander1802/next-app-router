@@ -1,5 +1,6 @@
 import styles from './ButtonIcon.module.css';
-import { ButtonIconProps, icons } from './ButtonIcon.props';
+import { ButtonIconProps } from './ButtonIcon.props';
+import Image from 'next/image';
 import cn from 'classnames';
 
 export const ButtonIcon = ({
@@ -8,7 +9,6 @@ export const ButtonIcon = ({
 	className,
 	...props
 }: ButtonIconProps): JSX.Element => {
-	const IconComp = icons[icon];
 	return (
 		<button
 			className={cn(styles.button, className, {
@@ -17,7 +17,12 @@ export const ButtonIcon = ({
 			})}
 			{...props}
 		>
-			<IconComp />
+			<Image
+				src={`/${icon}.svg`}
+				alt={`${icon}`}
+				width={icon === 'menu' ? 20 : 12}
+				height={icon === 'menu' ? 17 : 12}
+			/>
 		</button>
 	);
 };

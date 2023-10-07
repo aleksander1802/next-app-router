@@ -8,6 +8,7 @@ import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
+import { ButtonIcon } from '@/components/ButtonIcon/ButtonIcon';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -43,7 +44,11 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 				height={44}
 				priority
 			/>
-
+			<ButtonIcon
+				appearance="white"
+				icon="menu"
+				onClick={() => setIsOpened(true)}
+			/>
 			<motion.div
 				className={styles.mobileMenu}
 				variants={variants}
@@ -51,6 +56,12 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 				animate={isOpened ? 'opened' : 'closed'}
 			>
 				<Sidebar />
+				<ButtonIcon
+					className={styles.menuClose}
+					appearance="white"
+					icon="close"
+					onClick={() => setIsOpened(false)}
+				/>
 			</motion.div>
 		</header>
 	);
