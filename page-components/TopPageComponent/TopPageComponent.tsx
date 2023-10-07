@@ -50,6 +50,7 @@ export const TopPageComponent = ({
 							role="listitem"
 							key={p._id}
 							product={p}
+							layout
 						/>
 					))}
 			</div>
