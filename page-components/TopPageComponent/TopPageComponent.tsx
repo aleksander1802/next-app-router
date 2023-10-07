@@ -22,8 +22,6 @@ export const TopPageComponent = ({
 		dispathSort({ type: sort });
 	};
 
-	// const shouldReduceMotion = useReducedMotion();
-
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.title}>

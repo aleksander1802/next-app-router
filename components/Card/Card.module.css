@@ -3,7 +3,7 @@
 	background: var(--white);
 	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
 	position: relative;
-	z-index: 10;
+	z-index: 5;
 }
 
 .blue {

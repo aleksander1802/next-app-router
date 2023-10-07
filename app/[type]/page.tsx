@@ -1,4 +1,5 @@
 import { getPage } from '@/api/page';
+import { Htag } from '@/components';
 import { firstLevelMenu } from '@/helpers/helpers';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -33,5 +34,10 @@ export default async function PageAlias({
 		notFound();
 	}
 
-	return <div>Page {params.type}</div>;
+	return (
+		<Htag tag="h1">
+			{' '}
+			<span className="capitalize">{params.type}</span> page
+		</Htag>
+	);
 }

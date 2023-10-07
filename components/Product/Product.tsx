@@ -1,5 +1,5 @@
-/* eslint-disable react/display-name */
 'use client';
+/* eslint-disable react/display-name */
 import { ProductProps } from './Product.props';
 import styles from './Product.module.css';
 import cn from 'classnames';
@@ -26,8 +26,17 @@ export const Product = motion(
 			const reviewRef = useRef<HTMLDivElement>(null);
 
 			const variants = {
-				visible: { opacity: 1, height: 'auto' },
-				hidden: { opacity: 0, height: 0 },
+				visible: {
+					opacity: 1,
+					height: 'auto',
+				},
+				hidden: {
+					opacity: 0,
+					height: 0,
+					transitionEnd: {
+						display: 'none',
+					},
+				},
 			};
 
 			const scrollToReview = () => {

@@ -47,7 +47,7 @@
 }
 
 .primary {
-	color: var(--primary-dark);
-	border: 1px solid var(--primary-dark);
+	color: var(--primary-light);
+	border: 1px solid var(--primary-light);
 	background: none;
 }

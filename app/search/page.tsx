@@ -26,5 +26,5 @@ export default function SearchAlias({
 		notFound();
 	}
 
-	return <div>Search: {searchParams.query}</div>;
+	return <div>Search result: {searchParams.query}</div>;
 }

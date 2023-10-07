@@ -1,7 +1,6 @@
 import { Header } from '@/components/layoutComponents/Header/Header';
 import './globals.css';
 import styles from './Layout.module.css';
-
 import type { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
 import { Sidebar } from '@/components/layoutComponents/Sidebar/Sidebar';
@@ -12,7 +11,6 @@ const inter = Noto_Sans({
 	weight: ['300', '400', '500', '700'],
 	subsets: ['cyrillic'],
 	style: ['normal'],
-	display: 'swap',
 });
 
 export const metadata: Metadata = {
@@ -26,7 +24,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }) {
 	return (
-		<html lang="en">
+		<html lang="ru">
 			<body className={inter.className}>
 				<div className={styles.wrapper}>
 					<Header className={styles.header} />

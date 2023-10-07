@@ -4,7 +4,7 @@
 
 .active {
 	color: var(--primary-light);
-
+	text-decoration: underline;
 	font-weight: bold;
 }
 
@@ -39,6 +39,11 @@
 
 	font-size: 16px;
 	line-height: 22px;
+}
+
+.sort button:hover {
+	color: var(--primary-light);
+	text-decoration: underline;
 }
 
 .sort button:not(.active) {
