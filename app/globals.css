@@ -37,9 +37,9 @@ a {
 	--gray-dark: #6c7077;
 	--white: white;
 	--primary: linear-gradient(273deg, #352467 4.95%, #1a1333 93.62%);
-	--primary-hover: linear-gradient(183deg, crimson, #4643ff 73.62%);
+	--primary-hover: linear-gradient(183deg, crimson, #4340fe 73.62%);
 	--primary-dark: midnightblue;
-	--primary-light: #4643ff;
+	--primary-light: #4340fe;
 	--red-light: #fea291;
 	--red: #fc836d;
 	--green: #007b48;
