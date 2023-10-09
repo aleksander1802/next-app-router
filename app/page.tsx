@@ -1,7 +1,6 @@
 import { Htag } from '@/components';
 import { pathMenu } from '@/helpers/path';
 import styles from './Mainpage.module.css';
-import Link from 'next/link';
 
 export default function Home() {
 	return (

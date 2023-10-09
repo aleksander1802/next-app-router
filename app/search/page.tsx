@@ -1,5 +1,3 @@
-import { getPage } from '@/api/page';
-
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
