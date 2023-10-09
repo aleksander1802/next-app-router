@@ -15,7 +15,7 @@ export const TopPageComponent = ({
 }: TopPageComponentProps): JSX.Element => {
 	const [{ products: sortedProducts, sort }, dispathSort] = useReducer(
 		sortReducer,
-		{ products, sort: SortEnum.Rating },
+		{ products, sort: SortEnum.Price },
 	);
 
 	const setSort = (sort: SortEnum) => {

@@ -21,27 +21,28 @@ export const Sort = ({
 			>
 				Сортировка
 			</div>
-			<button
-				id="rating"
-				onClick={() => setSort(SortEnum.Rating)}
-				className={cn({
-					[styles.active]: sort == SortEnum.Rating,
-				})}
-				aria-labelledby="sort rating"
-			>
-				<SortIcon className={styles.sortIcon} />
-				По рейтингу
-			</button>
+
 			<button
 				id="price"
 				onClick={() => setSort(SortEnum.Price)}
 				className={cn({
-					[styles.active]: sort == SortEnum.Price,
+					[styles.active]: sort === SortEnum.Price,
 				})}
 				aria-labelledby="sort price"
 			>
 				<SortIcon className={styles.sortIcon} />
 				По цене
+			</button>
+			<button
+				id="rating"
+				onClick={() => setSort(SortEnum.Rating)}
+				className={cn({
+					[styles.active]: sort === SortEnum.Rating,
+				})}
+				aria-labelledby="sort rating"
+			>
+				<SortIcon className={styles.sortIcon} />
+				По рейтингу
 			</button>
 		</div>
 	);
