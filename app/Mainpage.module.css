@@ -1,0 +1,16 @@
+.mainPage ul {
+	list-style-type: none;
+}
+
+.link {
+	text-decoration: underline;
+	cursor: default;
+}
+
+.link:hover {
+	color: var(--primary-light);
+}
+
+[class='dark'] .link:hover {
+	color: gold;
+}
