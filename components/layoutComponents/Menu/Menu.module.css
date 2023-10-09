@@ -101,6 +101,6 @@
 }
 
 [class='dark'] .firstLevelActive svg *,
-.firstLevel:hover svg * {
+[class='dark'] .firstLevel:hover svg * {
 	fill: gold;
 }

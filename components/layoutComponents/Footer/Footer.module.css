@@ -13,6 +13,10 @@
 	gap: 10px 40px;
 }
 
+.footer span {
+	cursor: default;
+}
+
 .footer a:hover {
 	color: var(--gray-light);
 }

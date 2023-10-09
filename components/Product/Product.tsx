@@ -14,6 +14,7 @@ import { ForwardedRef, forwardRef, useRef, useState } from 'react';
 import { Review } from '../Review/Review';
 import { ReviewForm } from '../ReviewForm/ReviewForm';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export const Product = motion(
 	forwardRef(
@@ -125,7 +126,7 @@ export const Product = motion(
 							кредит
 						</div>
 						<div className={styles.rateTitle}>
-							<a
+							<Link
 								href="#ref"
 								onClick={scrollToReview}
 							>
@@ -135,7 +136,7 @@ export const Product = motion(
 									'отзыва',
 									'отзывов',
 								])}
-							</a>
+							</Link>
 						</div>
 						<Divider className={styles.hr} />
 						<div className={styles.description}>
