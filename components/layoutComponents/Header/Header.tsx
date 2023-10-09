@@ -2,13 +2,13 @@
 import { HeaderProps } from './Header.props';
 import styles from './Header.module.css';
 import cn from 'classnames';
-
 import { motion } from 'framer-motion';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { useEffect, useState } from 'react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { ButtonIcon } from '@/components/ButtonIcon/ButtonIcon';
+import Link from 'next/link';
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 	const [isOpened, setIsOpened] = useState<boolean>(false);
@@ -37,13 +37,15 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
 			className={cn(className, styles.header)}
 			{...props}
 		>
-			<Image
-				src={'/logo.svg'}
-				alt={'logo'}
-				width={159}
-				height={44}
-				priority
-			/>
+			<Link href={'/'}>
+				<Image
+					src={'/logo.svg'}
+					alt={'logo'}
+					width={159}
+					height={44}
+					priority
+				/>
+			</Link>
 			<ButtonIcon
 				appearance="white"
 				icon="menu"
