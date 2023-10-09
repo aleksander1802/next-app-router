@@ -18,7 +18,6 @@ export interface MenuItem {
 export interface FirstLevelMenuItem {
 	route: string;
 	name: string;
-	icon: string;
-	filledIcon: string,
+	icon: JSX.Element;
 	id: TopLevelCategory;
 }

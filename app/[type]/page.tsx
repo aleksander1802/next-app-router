@@ -1,5 +1,5 @@
 import { Htag } from '@/components';
-import { firstLevelMenu } from '@/helpers/helpers';
+import { pathMenu } from '@/helpers/path';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
@@ -20,7 +20,7 @@ export default async function PageAlias({
 }: {
 	params: { type: string };
 }) {
-	const page = firstLevelMenu.find((item) => item.route === params.type);
+	const page = pathMenu.find((item) => item.route === params.type);
 
 	if (!page) {
 		notFound();

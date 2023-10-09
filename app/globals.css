@@ -2,10 +2,8 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	color: var(--black);
-	background: #f5f6f8;
+	background: var(--background);
 	font-family: 'Noto Sans KR', sans-serif;
-	/* background: linear-gradient(273deg, #352467 4.95%, #1a1333 93.62%); */
 }
 
 a {
@@ -32,6 +30,7 @@ a {
 
 :root {
 	--black: #3b434e;
+	--background: #f5f6f8;
 	--gray-light: #ebebeb;
 	--gray: #a4a4a4;
 	--gray-dark: #6c7077;
@@ -42,7 +41,14 @@ a {
 	--primary-light: #4340fe;
 	--red-light: #fea291;
 	--red: #fc836d;
+	--gold: #bfa181;
 	--green: #007b48;
 	--green-light: #c8f8e4;
 	--font-family: 'Noto Sans KR', sans-serif;
+}
+
+[class='dark'] body {
+	--background: linear-gradient(273deg, #352467 4.95%, #1a1333 93.62%);
+	--gray-light: #4340fe;
+	--gray-dark: #f2c5df;
 }

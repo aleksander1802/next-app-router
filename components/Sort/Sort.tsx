@@ -1,6 +1,7 @@
+'use client';
 import { SortEnum, SortProps } from './Sort.props';
 import cn from 'classnames';
-import Image from 'next/image';
+import SortIcon from './sort.svg';
 import styles from './Sort.module.css';
 
 export const Sort = ({
@@ -28,13 +29,7 @@ export const Sort = ({
 				})}
 				aria-labelledby="sort rating"
 			>
-				<Image
-					className={styles.sortIcon}
-					width={20}
-					height={13}
-					src={'/sort.svg'}
-					alt={'sort'}
-				/>
+				<SortIcon className={styles.sortIcon} />
 				По рейтингу
 			</button>
 			<button
@@ -45,13 +40,7 @@ export const Sort = ({
 				})}
 				aria-labelledby="sort price"
 			>
-				<Image
-					className={styles.sortIcon}
-					width={20}
-					height={13}
-					src={'/sort.svg'}
-					alt={'sort'}
-				/>
+				<SortIcon className={styles.sortIcon} />
 				По цене
 			</button>
 		</div>

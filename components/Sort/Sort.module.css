@@ -49,3 +49,12 @@
 .sort button:not(.active) {
 	grid-template-columns: 1fr;
 }
+
+[class='dark'] .active,
+[class='dark'] .sort button:hover {
+	color: gold;
+}
+
+[class='dark'] .active svg * {
+	fill: gold;
+}

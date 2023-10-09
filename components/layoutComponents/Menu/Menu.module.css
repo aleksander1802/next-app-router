@@ -19,11 +19,11 @@
 
 .firstLevelActive,
 .firstLevel:hover {
-	color: var(--primary-light);
+	color: var(--primary-dark);
 }
 
 .firstLevelActive svg,
-.firstLevel:hover svg {
+.firstLevel:hover svg * {
 	fill: var(--primary-light);
 }
 
@@ -49,7 +49,6 @@
 	color: var(--primary-light);
 }
 
-
 .secondBlock {
 	margin-top: 15px;
 	margin-left: 12px;
@@ -70,7 +69,7 @@
 
 .thirdLevel {
 	display: block;
-	
+
 	cursor: pointer;
 
 	color: var(--gray-dark);
@@ -87,4 +86,21 @@
 
 .menuCursor {
 	cursor: pointer;
+}
+
+[class='dark'] .firstLevelActive,
+[class='dark'] .firstLevel:hover {
+	color: gold;
+}
+
+[class='dark'] .thirdLevelActive,
+[class='dark'] .thirdLevel:hover,
+[class='dark'] .secondLevelActive,
+[class='dark'] .secondLevel:hover {
+	color: crimson;
+}
+
+[class='dark'] .firstLevelActive svg *,
+.firstLevel:hover svg * {
+	fill: gold;
 }

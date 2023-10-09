@@ -13,7 +13,3 @@
 	background: var(--primary);
 	box-shadow: 0 4px 4px rgb(0 0 0 / 5%);
 }
-
-.up:hover {
-	background-color: var(--primary-hover);
-}

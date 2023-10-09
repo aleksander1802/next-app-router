@@ -49,3 +49,11 @@
 .ghost:hover svg {
 	fill: var(--white);
 }
+
+[class='dark'] .ghost {
+	color: white;
+}
+
+[class='dark'] .ghost svg {
+	fill: var(--white);
+}

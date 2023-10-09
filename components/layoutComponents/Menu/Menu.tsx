@@ -11,7 +11,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { firstLevelMenu } from '../../../helpers/helpers';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 export function Menu() {
 	const [announce, setAnnounce] = useState<'closed' | 'opened' | undefined>();
@@ -92,19 +91,7 @@ export function Menu() {
 										m.id === activeCategory,
 								})}
 							>
-								<Image
-									alt={'course logo'}
-									src={
-										m.id === activeCategory
-											? m.filledIcon
-											: m.icon
-									}
-									width={24}
-									height={24}
-									priority
-									color="white"
-									style={{ fill: 'white' }}
-								/>
+								{m.icon}
 								<span className={cn(styles.menuCursor)}>
 									{m.name}
 								</span>

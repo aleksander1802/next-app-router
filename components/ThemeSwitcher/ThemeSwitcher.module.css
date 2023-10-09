@@ -1,0 +1,16 @@
+.icon {
+	width: 2rem;
+	height: 2rem;
+	position: absolute;
+	top: 0.8rem;
+	right: 3.5rem;
+	cursor: pointer;
+}
+
+.gray {
+	color: rgb(17 24 39);
+}
+
+.yellow {
+	color: rgb(234 179 8);
+}

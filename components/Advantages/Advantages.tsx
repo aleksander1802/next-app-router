@@ -17,7 +17,7 @@ export const Advantages = ({ advantages }: AdvantagesProps): JSX.Element => {
 						height={50}
 					/>
 					<div className={styles.title}>{a.title}</div>
-					<hr className={styles.vline} />
+					{a.description && <hr className={styles.vline} />}
 					<div>{a.description}</div>
 				</div>
 			))}

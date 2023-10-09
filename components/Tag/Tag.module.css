@@ -51,3 +51,8 @@
 	border: 1px solid var(--primary-light);
 	background: none;
 }
+
+[class='dark'] .primary {
+	color: gold;
+	border: 1px solid gold;
+}

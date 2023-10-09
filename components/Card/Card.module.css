@@ -10,3 +10,7 @@
 .blue {
 	background: #f9f8ff;
 }
+
+[class='dark'] .card {
+	background: #0a1828;
+}

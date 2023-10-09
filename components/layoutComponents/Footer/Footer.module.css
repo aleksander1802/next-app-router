@@ -22,3 +22,7 @@
 		grid-template-columns: 1fr;
 	}
 }
+
+[class='dark'] .footer {
+	border-top: 1px solid gold;
+}

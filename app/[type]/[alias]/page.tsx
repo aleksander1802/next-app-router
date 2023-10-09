@@ -1,6 +1,7 @@
 import { getPage } from '@/api/page';
 import { getProducts } from '@/api/products';
 import { firstLevelMenu } from '@/helpers/helpers';
+import { pathMenu } from '@/helpers/path';
 import { TopPageComponent } from '@/page-components';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
@@ -28,9 +29,7 @@ export default async function PageAlias({
 		notFound();
 	}
 
-	const firstCategoryItem = firstLevelMenu.find(
-		(m) => m.route === params.type,
-	);
+	const firstCategoryItem = pathMenu.find((m) => m.route === params.type);
 
 	const products = await getProducts(page.category);
 

@@ -17,10 +17,6 @@
 	fill: var(--white);
 }
 
-.primary:hover {
-	background: var(--primary-hover);
-}
-
 .white {
 	background-color: var(--white);
 }
@@ -35,4 +31,8 @@
 
 .white:hover svg * {
 	fill: var(--white);
+}
+
+[class='dark'] .primary {
+	background: goldenrod;
 }
