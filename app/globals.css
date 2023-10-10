@@ -34,13 +34,15 @@ a {
 	--gray-light: #ebebeb;
 	--gray: #a4a4a4;
 	--gray-dark: #6c7077;
+	--gray-input: #424242;
+	--gray-placeholder: #9c9c9c;
 	--white: white;
 	--primary: linear-gradient(273deg, #352467 4.95%, #1a1333 93.62%);
 	--primary-hover: linear-gradient(183deg, crimson, #4340fe 73.62%);
 	--primary-dark: midnightblue;
 	--primary-light: #4340fe;
 	--red-light: #fea291;
-	--red: #fc836d;
+	--red: crimson;
 	--gold: #bfa181;
 	--green: #007b48;
 	--green-light: #c8f8e4;

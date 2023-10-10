@@ -34,3 +34,12 @@
 
 	color: var(--red);
 }
+
+[class='dark'] .textarea {
+	color: var(--white);
+	background: var(--gray-input);
+}
+
+[class='dark'] .textarea::placeholder {
+	color: var(--gray-placeholder);
+}

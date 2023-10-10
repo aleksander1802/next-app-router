@@ -30,3 +30,7 @@
 [class='dark'] .footer {
 	border-top: 1px solid gold;
 }
+
+[class='dark'] .footer a:hover {
+	color: gold;
+}

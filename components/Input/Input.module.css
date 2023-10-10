@@ -33,3 +33,12 @@
 
 	color: var(--red);
 }
+
+[class='dark'] .input {
+	color: var(--white);
+	background: var(--gray-input);
+}
+
+[class='dark'] .input::placeholder {
+	color: var(--gray-placeholder);
+}
