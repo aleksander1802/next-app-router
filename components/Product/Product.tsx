@@ -56,11 +56,11 @@ export const Product = motion(
 				>
 					<Card className={styles.product}>
 						<div className={styles.logo}>
-							<img
+							<Image
 								src={
 									/^https?:\/\//i.test(product.image)
 										? product.image
-										: process.env.NEXT_PUBLIC_DOMAIN + product.image
+										: 'https://cdn-bucket.hb.bizmrg.com' + product.image
 								}
 								alt={product.title}
 								width={70}
