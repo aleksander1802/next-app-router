@@ -59,7 +59,7 @@ export const Product = motion(
 						<div className={styles.logo}>
 							<Image
 								src={
-									process.env.NEXT_PUBLIC_DOMAIN +
+									
 									product.image
 								}
 								alt={product.title}
