@@ -20,9 +20,10 @@ export const Product = motion(
 	forwardRef(
 		(
 			{ product, className, ...props }: ProductProps,
-			ref: ForwardedRef<HTMLDivElement>
+			ref: ForwardedRef<HTMLDivElement>,
 		): JSX.Element => {
-			const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+			const [isReviewOpened, setIsReviewOpened] =
+				useState<boolean>(false);
 			const reviewRef = useRef<HTMLDivElement>(null);
 
 			const variants = {
@@ -58,9 +59,8 @@ export const Product = motion(
 						<div className={styles.logo}>
 							<Image
 								src={
-									/^https?:\/\//i.test(product.image)
-										? product.image
-										: process.env.NEXT_PUBLIC_DOMAIN + product.image
+									process.env.NEXT_PUBLIC_DOMAIN +
+									product.image
 								}
 								alt={product.title}
 								width={70}
@@ -78,7 +78,9 @@ export const Product = motion(
 									className={styles.oldPrice}
 									color="green"
 								>
-									<span className="visualyHidden">скидка</span>
+									<span className="visualyHidden">
+										скидка
+									</span>
 									{priceRu(product.price - product.oldPrice)}
 								</Tag>
 							)}
@@ -90,9 +92,15 @@ export const Product = motion(
 						</div>
 						<div className={styles.rating}>
 							<span className="visualyHidden">
-								{'рейтинг' + (product.reviewAvg ?? product.initialRating)}
+								{'рейтинг' +
+									(product.reviewAvg ??
+										product.initialRating)}
 							</span>
-							<Rating rating={product.reviewAvg ?? product.initialRating} />
+							<Rating
+								rating={
+									product.reviewAvg ?? product.initialRating
+								}
+							/>
 						</div>
 						<div className={styles.tags}>
 							{product.categories.map((c) => (
@@ -123,45 +131,69 @@ export const Product = motion(
 								onClick={scrollToReview}
 							>
 								{product.reviewCount}{' '}
-								{declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
+								{declOfNum(product.reviewCount, [
+									'отзыв',
+									'отзыва',
+									'отзывов',
+								])}
 							</Link>
 						</div>
 						<Divider className={styles.hr} />
-						<div className={styles.description}>{product.description}</div>
+						<div className={styles.description}>
+							{product.description}
+						</div>
 						<div className={styles.feature}>
 							{product.characteristics.map((c) => (
 								<div
 									className={styles.characteristics}
 									key={c.name}
 								>
-									<span className={styles.characteristicsName}>{c.name}</span>
-									<span className={styles.characteristicsDots}></span>
-									<span className={styles.characteristicsValue}>{c.value}</span>
+									<span
+										className={styles.characteristicsName}
+									>
+										{c.name}
+									</span>
+									<span
+										className={styles.characteristicsDots}
+									></span>
+									<span
+										className={styles.characteristicsValue}
+									>
+										{c.value}
+									</span>
 								</div>
 							))}
 						</div>
 						<div className={styles.advBlock}>
 							{product.advantages && (
 								<div className={styles.advantages}>
-									<div className={styles.advTitle}>Преимущества</div>
+									<div className={styles.advTitle}>
+										Преимущества
+									</div>
 									<div>{product.advantages}</div>
 								</div>
 							)}
 							{product.disadvantages && (
 								<div className={styles.disadvantages}>
-									<div className={styles.advTitle}>Недостатки</div>
+									<div className={styles.advTitle}>
+										Недостатки
+									</div>
 									<div>{product.disadvantages}</div>
 								</div>
 							)}
 						</div>
 						<Divider className={cn(styles.hr, styles.hr2)} />
 						<div className={styles.actions}>
-							<Button appearance="primary">Узнать подробнее</Button>
+							<Button appearance="primary">
+								Узнать подробнее
+							</Button>
 							<Button
 								appearance="ghost"
 								arrow={isReviewOpened ? 'down' : 'right'}
 								className={styles.reviewButton}
-								onClick={() => setIsReviewOpened(!isReviewOpened)}
+								onClick={() =>
+									setIsReviewOpened(!isReviewOpened)
+								}
 								aria-expanded={isReviewOpened}
 							>
 								Читать отзывы
@@ -193,8 +225,8 @@ export const Product = motion(
 					</motion.div>
 				</div>
 			);
-		}
-	)
+		},
+	),
 );
 
 Product.displayName = 'Product';
