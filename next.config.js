@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ['courses-top.ru', 
-		'cdn-bucket.hb.bizmrg.com'],
+		domains: ['courses-top.ru', 'cdn-bucket.hb.bizmrg.com'],
 	},
 	webpack: (config, options) => {
 		config.module.rules.push({
