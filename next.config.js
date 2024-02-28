@@ -1,7 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+	// images: {
+	// 	domains: ['courses-top.ru', 'cdn-bucket.hb.bizmrg.com'],
+	// },
 	images: {
-		domains: ['courses-top.ru', 'cdn-bucket.hb.bizmrg.com'],
+		remotePatterns: [
+			{
+				hostname: 'courses-top.ru',
+			},
+			{
+				hostname: 'cdn-bucket.hb.bizmrg.com',
+			},
+		],
 	},
 	webpack: (config, options) => {
 		config.module.rules.push({
