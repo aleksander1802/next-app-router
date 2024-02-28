@@ -12,5 +12,7 @@ export async function getProducts(page: string): Promise<ProductModel[]> {
 		next: { revalidate: 10 },
 	});
 
+	
+
 	return res.json();
 }
